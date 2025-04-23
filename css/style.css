@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(199 199 199 / 55%);
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    cursor: url('img/car_cursor.ico'), auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* start header */
+.header {
+    width: 80%;
+    height: 100px;
+    z-index: 99;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.logo {
+    width: 140px;
+    height: 100%;
+}
+
+.img-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.icon {
+    cursor: pointer;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    }
+
+.list ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    height: calc(100% + 20px);
+    padding: 10px;
+    cursor: pointer;
+}
+.border-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2px;
+    height: 0;
+    background-color: #5e0076;
+    transition: .5s;
+}
+
+.list ul li:hover .border-left {
+    transition: .5s;
+    height: 100%
+}
+
+.border-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0;
+    height: 2px;
+    background-color: #5e0076;
+    transition: .5s;
+}
+
+.list ul li:hover .border-bottom {
+    transition: .5s;
+    width: 100%;
+}
+
+.border-right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 2px;
+    height: 0;
+    background-color: #5e0076;
+    transition-delay: .3s;
+    transition-duration: .5s;
+}
+
+.list ul li:hover .border-right {
+    height: 100%
+}
+
+.border-top {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 2px;
+    background-color: #5e0076;
+    transition-delay: .3s;
+    transition-duration: .5s;
+}
+.list ul li:hover .border-top {
+    width: 100%;
+}
+.list ul li::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 100%;
+    background-color: #00000023;
+    transition-delay: .5s;
+    transition-duration: .5s;
+}
+.list ul li:hover::after {
+    width: 100%;
+    height: 100%;
+}
+.text {
+    position: absolute;
+    top: 43px;
+    z-index: 1;
+    color: white;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(144deg, black, gold);
+    border: 2px solid #ffffff;
+    padding: 10px 100px 10px 10px;
+    scale: 0;
+    left: 0;
+    opacity: .8;
+    transition: .5s;
+}
+.list ul li:hover .text {
+    scale: 1;
+}
+.frist{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 2px dotted #ffffff;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: #4c005f;
+    font-size: 17px;
+}
+
+.icon-header {
+    font-size: 29px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.icon-header:hover {
+    scale: 1.1;
+    opacity: .5;
+    transition: .5s;
+}
+
+.icon-shop::after {
+    content: "0";
+    position: absolute;
+    top: 51%;
+    left: 91%;
+    background-color: #5e0076;
+    color: white;
+    padding: 4px;
+    z-index: 2;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.icon span {
+    margin-left: 10px;
+}
+
+/* ///////////////////// */
+.img-features {
+    width: 100%;
+    height: 700px;
+    background-image: url(img/6b262666407e044d946399660379d8f0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+.text-features {
+    height: 100%;
+    place-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.text-features h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.text-features button {
+    background-color: #3b0049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+/* /////////////////////////// */
+.title-items {
+    text-align: center;
+    margin: 40px auto 10px auto;
+}
+
+.hr {
+    margin: auto;
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    transition: .3s;
+    position: relative;
+}
+
+.hr::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5e0076;
+    position: absolute;
+    top: -4px;
+    left: -5px;
+    transition: .3s;
+}
+
+.hr::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3c004b;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    transition: .3s;
+}
+
+.hr:hover {
+    width: 150px;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-1 {
+    width: 24%;
+    margin: 20px 0;
+    transition: .3s;
+    position: relative;
+    height: fit-content;
+}
+
+.item-1 img {
+    width: 100%;
+    height: 400px;
+}
+
+.text-item-1 {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.text-item-1 .op {
+    opacity: .6;
+}
+
+.item-1 span {
+    font-size: 28px;
+    background-color: rgb(101, 0, 121);
+    color: white;
+    width: 33px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+}
+
+.item-1:hover span {
+    opacity: 1;
+    transition: .5s;
+}
+/* ////////////////////////// */
+.discounts{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    margin-bottom: 20px;
+}
+.information{
+    width: 49%;
+    padding: 0 20px;
+    position: relative;
+    font-size: 18px;
+    background: linear-gradient(144deg, rgba(0, 0, 0, 0.639), rgba(255, 217, 0, 0.309));
+    color: white;
+}
+.information .scr{
+    content: "______  ______  ______";
+    position: absolute;
+    bottom: 25px;
+    color: #270031d1;
+    right: 15px;
+}
+.opponent-1 , .opponent-2{
+    width: 24%;
+    transition: .5s;
+}
+.opponent-1{
+    background-image: url(img/c4e680564c6edda5061c2dc22a297db2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.opponent-2 {
+    background-image: url(img/0069e5b05e05599a643d83f89140dc5c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.discounts .information span{
+    font-weight: bold;
+    font-size: 25px;
+}
+.discounts .imp{
+    margin: 2px 54px 20px;
+}
+.text-opponent-1 , .text-opponent-2{
+    font-size: 20px;
+    color: white;
+    margin: 25px;
+}
+.opponent-1:hover,
+.opponent-2:hover{
+    scale: 1.1;
+}
+.characteristics{
+    margin: 50px 0;
+    column-count: 5;
+    column-rule: 2px solid #000000;
+}
+.item-characteristic{
+    text-align: center;
+    transition: .5s;
+}
+.characteristics .item-characteristic i{
+    font-size: 40px;
+    transition: .5s;
+}
+.item-characteristic:hover.item-characteristic i{
+    opacity: .8;
+    scale: 1.1;
+}
+.hr-2{
+    margin: 20px 0;
+}
+.products{
+    margin-top: 100PX;
+}.title-products{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.list-products{
+    width: 30%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-1 {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+   .card {
+       perspective: 1000px;
+   }
+
+   .card-inner {
+       position: relative;
+       width: 350px;
+       height: 450px;
+       transition: transform 0.6s;
+       transform-style: preserve-3d;
+   }
+
+   .card:hover .card-inner {
+       transform: rotateY(180deg);
+   }
+
+   .card-front,
+   .card-back {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       backface-visibility: hidden;
+       border-radius: 10px;
+       overflow: hidden;
+   }
+
+   .card-front img,
+   .card-back img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+   .card-back {
+       transform: rotateY(180deg);
+   }
+.icon-products {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+}
+.icon-products i {
+    text-align: center;
+    margin: 0 5px;
+    background: linear-gradient(200deg, black, gold);
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+    border-radius: 6px;
+}
+.star{
+    margin: 5px 0 
+}
+.star-yellow{
+    color: yellow;
+}
